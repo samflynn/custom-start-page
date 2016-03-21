@@ -5,10 +5,15 @@
 *    For chrome: 
 
 Prefix followed by a space followed by query:
+
 !d : Dictionary search displayed on the same page for the query.
+
 !p : Piratebay search.
+
 !k : Kickass search.
+
 !y : YouTube search.
+
 !w : Weather info displayed on the same page for the queried city.
 
 Weather information obtained from OpenWeather.
