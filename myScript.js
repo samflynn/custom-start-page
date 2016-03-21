@@ -45,8 +45,6 @@ function execute() {
 	else if(searchtype == '!w') {
 		findweather(specific);
 		showhide('shide');
-		//var we = 'http://api.openweathermap.org/data/2.5/find?q=London&units=metric&appid=ecfffdc27e4b587914cfbfd06811cf66';
-		//showhide('shide');
 	}
 
 	else {
@@ -63,10 +61,9 @@ function showhide(id) {
 		sh.style.display = 'block'
 }
 
-//var we = "http://api.openweathermap.org/data/2.5/find?q=Delhi,India&units=metric&appid=ecfffdc27e4b587914cfbfd06811cf66";
 
 function findweather(specific) {
-	var we = 'http://api.openweathermap.org/data/2.5/find?q=' + specific + '&units=metric&appid=ecfffdc27e4b587914cfbfd06811cf66';
+	var we = 'http://api.openweathermap.org/data/2.5/find?q=' + specific + '&units=metric&appid={{$YOUR KEY HERE}}';
 		
 	$.getJSON(we, function(json) {
 		var loc = json.list[0].name + ', ' + json.list[0].sys.country;
@@ -114,7 +111,7 @@ function dshowhide(id) {
 
 
 function define(specific) {
-	var we = 'http://api.wordnik.com:80/v4/word.json/' + specific + '/definitions?limit=200&includeRelated=false&sourceDictionaries=wiktionary&useCanonical=false&includeTags=false&api_key=2bb98dc805bdbf90bb0010ec3110eeaa38f67c77aa3bd9cb9';
+	var we = 'http://api.wordnik.com:80/v4/word.json/' + specific + '/definitions?limit=200&includeRelated=false&sourceDictionaries=wiktionary&useCanonical=false&includeTags=false&api_key={{$YOUR KEY HERE}}';
 		
 	$.getJSON(we, function(def) {
 
