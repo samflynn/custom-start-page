@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+	<meta charset="utf-8">
+	<title> Start </title>
+	<meta name="StartPage" content="Start">
+
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<link href="css/weather-icons.css" rel="stylesheet" type="text/css">
+
+	<style type="text/css">	
+	input::-webkit-input-placeholder {
+		color: white !important;
+	}
+ 
+	input:-moz-placeholder { /* Firefox 18- */
+		color: white !important;  
+	}
+ 
+	input::-moz-placeholder {  /* Firefox 19+ */
+		color: white !important;  
+	}
+ 
+	input:-ms-input-placeholder {  
+		color: white !important;  
+	}
+		body{
+			background-image: url(skyline.png);
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-position: bottom;
+			background-size: contain;
+		}
+
+		#searchbar {
+				
+                /*margin-top: 260px;*/
+                width:500px;
+			}
+		.search {
+				width: 1050px;
+                padding:5px 15px;
+                background: transparent;
+                border:0px;
+                border-bottom: thick dotted #F8F8FF;
+                color: white;
+			}
+		.button {
+                position:relative;
+                padding:8px 15px;
+                left: -4px;
+                bottom: -3px;
+                border:0px;
+                background-color:#008980;
+                color:#fafafa;
+			}
+		.button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
+			}
+
+		input:focus{
+			outline: none;
+		}
+		a {
+			/*color: #004877;*/
+			
+			color: #03729F;
+			text-decoration: none;
+		}
+		a:hover {
+			color: #02A8F3;
+			text-decoration: none;
+		}
+
+
+	</style>
+
+</head>
+
+
+<body>
+	<div class="row" style="padding-top: 30px;">
+		<div class="col-lg-6">
+			<img src="shrey.gif" style="padding-top: 50px; padding-left: 50px;">
+		</div>
+			<div class="col-lg-3" style="padding: 1px 0px; width: 250px;">
+				<p>
+					<ul style="list-style-type: none; text-align: right; font-size: 25px; font-family: 'Helvetica' !important;">
+						<i><li><a href= "https://youtube.com">Youtube </a><br></li>
+						<li><a href="https://facebook.com">Facebook </a><br></li>
+						<li><a href="https://kat.cr">Kickass Torrents </a><br></li>
+						<li><a href="http://bbc.com">BBC </a><br></li>
+						<li><a href="http://paytm.com">Paytm </a><br></li></i>
+					</ul>
+				</p>
+			</div>
+			<div class="col-lg-3" style="padding: 1px 0px;">
+				<p>
+					<ul style="color: #00958A; list-style-type: none; text-align: left; padding: 0px 0px; font-size: 25px;">
+						<i><li>   <br></li>
+						<li><a href="https://www.youtube.com/user/PewDiePie/videos">| Pewdiepie</a></li>
+						<li><a href="http://reddit.com">| Reddit</a></li>
+						<li><a href="http://github.com">| Github</a></li>
+						<li><a href="http://www.theverge.com/">| The Verge</a></li>
+						<li><a href="http://tnp.dtu.ac.in/rm3y/login.php">| Resume Manager</a></li></i>
+					</ul>
+				</p>
+			</div>
+	</div>
+
+	<div id="shide" style="display: none; text-align: center; background-color: rgba(255,255,255,0.7); position: absolute; width: 100%; color: black; margin-top: 70px;">
+		<h3 id="he">Failed to Load</h3>
+		<div class="container">
+			<div class="row">
+					<div class="col-lg-4"><br></div>
+					<div class="col-lg-2" style="text-align: center;">
+						<div id="icons" style="font-size: 60px;"></div>
+						<p id="descrip" style="font-size: 20px;"></p>
+
+					</div>
+
+					<div class="col-lg-6" style="text-align: left;">
+						<h4 id ="waterfall" style="font-size: 20px;"></h4>
+						<p id="max" style="font-size: 20px;"></p>
+						<p id="min" style="font-size: 20px;"></p>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="dshide" style="display: none; text-align:left; background-color: rgba(255,255,255,0.7); position: absolute; width: 100%; color: black; margin-top: 50px;">
+			<div class="container" >
+				<p id="dhe" style="font-size: 20px;">Word not found/Internet connectivity issues</p></b>
+				<div>
+				<ul style="list-style-type: disc;">
+				<li><p id="type1"  style="font-size: 15px;"></p></li>
+						<i><p id="define1"  style="font-size: 15px;"></p></i>
+				<li><p id="type2"  style="font-size: 15px;"></p></li>
+						<i><p id="define2"  style="font-size: 15px;"></p></i>
+				<li><p id="type3"  style="font-size: 15px;"></p></li>
+						<i><p id="define3"  style="font-size: 15px;"></p></i>
+				</ul>
+				</div>
+			</div>
+</div>
+
+
+<div class="container">
+	<div style="position:absolute; bottom: 30px; height: 40px;">
+		<input id="s-q" class="search" type="text" placeholder="What are you looking for today?" autofocus autocomplete="off">
+		<input id="s-b" class="button" type="button" value="Search">
+	</div>
+	</div>
+</div>
+
+
+	<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<script src="myScript.js"></script>
+
+
+</body>
+</html>
