@@ -1,7 +1,8 @@
 # Your personalized minimalistic start page
 
-*    set it as the default homepage, change the preferences in the browser settings.
-*    for Firefox users, to set it as the "new tab" page too, install the add-on New Tab Override and set it preferences to "custom page".
+*    Set it as the default homepage, change the preferences in the browser settings.
+*    For Firefox users, to set it as the "new tab" page too, install the add-on New Tab Override and set it preferences to "custom page".
+*    For chrome: 
 
 Prefix followed by a space followed by query:
 !d : Dictionary search displayed on the same page for the query.
